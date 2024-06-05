@@ -213,15 +213,9 @@ const App=()=>{
         value={volume}     
         onChange={handleVolumeChange}
       />
-    <br>
-    </br>
-    
     <button onClick={() => setPower(!power)}>
        {power ? "Drum Off" : "Drum On"}
     </button>  
-    <br>
-    </br>
-    
     Sound type is now: {soundType} 
     </div>
 }
