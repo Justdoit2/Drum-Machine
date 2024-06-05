@@ -112,8 +112,7 @@ const secondSoundsGroup = [
       key: 'C',
       id: 'Snare',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
-    }
-  ];
+    }];
 
 const soundsName={
   heaterKit: " Heater Kit",
@@ -126,12 +125,11 @@ const soundsGroup={
 }
 
 const KeyboardKey=({play,sound:{key,url,keyCode}, power })=>{
-    const handleKeydown=(e)=>{
-     
+    const handleKeydown=(e)=>{  
     if(event.keyCode ===keyCode){
       play(key);
+        }
     }
-  }
     
   React.useEffect(()=>{
     document.addEventListener("keydown",handleKeydown);
@@ -148,7 +146,7 @@ const KeyboardKey=({play,sound:{key,url,keyCode}, power })=>{
 const KeyBoard=({play,sounds, power})=>{
   return (
     <div className="drum-pads">      
-      {sounds.map((sound)=> <KeyboardKey play={play} sound={sound} power=       {power}/>)}
+      {sounds.map((sound)=> <KeyboardKey play={play} sound={sound} power={power}/>)}
     </div>
     );
 }
